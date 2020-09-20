@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- owesome fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- page title -->
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="black-screen"></div>
+
+
+    <div id="wrapper">
+        <div id="menu" onclick="showNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <div id="nav">
+            <div id="close-icon" onclick="hideNav()">
+                <i class="fa fa-close" id="close"></i>
+
+                <ul>
+                    <li>
+                        <a href="../index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">about</a>
+                    </li>
+                    <li>
+                        <a href="./works.html">works</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+
+                <p id="quote">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, eaque.</p>
+
+                <p id="social">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-youtube-square"></i>
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <section id="contact-page">
+            <h1 id="banner-name"></h1>
+            <h2 class="subpage-title">contact <span>us</span></h2>
+
+            <h3 class="sub-header">Metzingerstrasse 2344 <br> 73990 Berlin <br> Germany</h3>
+
+            <h3 class="sub-header" id="email">TYPE YOUR EMAIL ADDRESS HERE</h3>
+
+            <h3 class="sub-header" id="phone">TYPE YOUR PHONE NUMBER HERE</h3>
+
+
+            <div id="contact-form">
+                <form action="contact.php">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone">
+                    <textarea name="message" id="message" cols="12" placeholder="Message" required></textarea>
+
+                    <button type="submit" name="submit" id="submit">Submit</button>
+                </form>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="transparent-column"></div>
+
+    <footer>
+        <h2 id="footer-name"></h2>
+        <h3><i class="fa fa-copyright"></i> <span id="copyright"></span> </h3>
+        <p>
+            <a href="#" target="blank" id="facebook-address">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+
+            <a href="#" target="blank" id="instagram-address">
+                <i class="fa fa-instagram"></i>
+            </a>
+
+            <a href="#" target="blank" id="twitter-address">
+                <i class="fa fa-twitter"></i>
+            </a>
+
+            <a href="#" target="blank" id="linkedin-address">
+                <i class="fa fa-linkedin"></i>
+            </a>
+
+            <a href="#" target="blank" id="youtube-address">
+                <i class="fa fa-youtube-square"></i>
+            </a>
+        </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

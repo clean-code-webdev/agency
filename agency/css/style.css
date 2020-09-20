@@ -1,0 +1,1230 @@
+/* ----- */
+/* ----- */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  background: #1f1f1f;
+  overflow-x: hidden;
+}
+
+/* ==================== */
+#black-screen {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.fadeout {
+  -webkit-animation: fadeout 1s ease-in-out forwards;
+          animation: fadeout 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -20000;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -20000;
+  }
+}
+
+/* ==================== */
+#source-code {
+  width: 4rem;
+  min-height: 4rem;
+  position: fixed;
+  top: 10rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  padding: 0rem 1rem 0rem 0.8rem;
+  border-radius: 1rem;
+}
+
+#source-code a i {
+  font-size: 3rem;
+  margin: 2rem 0;
+  color: yellow;
+}
+
+#source-code a i img {
+  width: 2.5rem;
+  margin: 2rem 0rem 2rem 0;
+}
+
+#source-code a #css-icon {
+  font-size: 2.5rem;
+}
+
+/* ==================== */
+#menu {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+#menu i {
+  color: #f1f1f1;
+  font-size: 3.5rem;
+  text-shadow: 0.2rem 0.2rem 0.5rem black, -0.2rem -0.2rem 0.5rem black;
+}
+
+#nav {
+  width: 30rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -30rem;
+  background: black;
+  z-index: 9999;
+}
+
+#nav #close-icon #close {
+  color: #f1f1f1;
+  font-size: 4rem;
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+}
+
+#nav ul {
+  width: 90%;
+  margin: 4rem 5% 5rem;
+  float: left;
+}
+
+#nav ul li {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  list-style: none;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+#nav #quote {
+  width: 90%;
+  color: #f1f1f1;
+  font-size: 2rem;
+  margin: auto;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+
+#nav #social {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+#nav #social i {
+  color: #f1f1f1;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+/* ========== */
+.showNav {
+  -webkit-animation: showNav 0.7s ease-out forwards;
+          animation: showNav 0.7s ease-out forwards;
+}
+
+@-webkit-keyframes showNav {
+  0% {
+    right: -30rem;
+    opacity: 0;
+  }
+  100% {
+    right: -1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes showNav {
+  0% {
+    right: -30rem;
+    opacity: 0;
+  }
+  100% {
+    right: -1rem;
+    opacity: 1;
+  }
+}
+
+.hideNav {
+  -webkit-animation: hideNav 0.7s ease-out forwards;
+          animation: hideNav 0.7s ease-out forwards;
+}
+
+@-webkit-keyframes hideNav {
+  0% {
+    right: -1rem;
+    opacity: 1;
+  }
+  100% {
+    right: -30rem;
+    opacity: 0;
+  }
+}
+
+@keyframes hideNav {
+  0% {
+    right: -1rem;
+    opacity: 1;
+  }
+  100% {
+    right: -30rem;
+    opacity: 0;
+  }
+}
+
+/* ========== */
+#wrapper {
+  width: 100%;
+  min-height: 100%;
+  background: #1f1f1f;
+  margin-bottom: 30vw;
+}
+
+#wrapper #banner {
+  width: 100vw;
+  height: 100vh;
+  background: #1f1f1f;
+  background-image: url("../image/banner.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrapper #banner #banner-img {
+  display: none;
+}
+
+#wrapper #banner h1 {
+  font-size: 3rem;
+  color: #f1f1f1;
+  text-indent: 2rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
+#wrapper #banner h1,
+#wrapper #banner h2,
+#wrapper #banner h3,
+#wrapper #banner p,
+#wrapper #banner #typewriter {
+  text-indent: 1.5rem;
+}
+
+#wrapper #banner h2 {
+  font-size: 3.9rem;
+  font-weight: 900;
+  float: left;
+  width: 100%;
+  color: #f1f1f1;
+  margin-top: 30vh;
+}
+
+#wrapper #banner h3 {
+  font-size: 3.9rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #ea0026;
+}
+
+#wrapper #banner p {
+  width: calc(100% - 3rem);
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+#wrapper #banner #typewriter {
+  color: yellow;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+#wrapper #banner #contact {
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 2rem;
+  width: 50%;
+  padding: 0.5rem 0;
+  border: 0.2rem solid #f1f1f1;
+  border-radius: 1rem;
+  position: absolute;
+  text-transform: uppercase;
+  bottom: 10rem;
+  left: 25%;
+}
+
+#wrapper #banner #contact a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+#wrapper .container {
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: 30vh;
+  padding-bottom: 2rem;
+}
+
+#wrapper .container a .work {
+  width: 80vw;
+  height: 80vw;
+  margin: 0 10vw 2rem;
+  border-radius: 1rem;
+}
+
+#wrapper .container a .work:first-child {
+  margin-top: 2rem;
+}
+
+#wrapper .container a .work:last-child {
+  margin-bottom: 0;
+}
+
+#wrapper .container a .work img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+#wrapper .container #contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  border: 0.2rem solid #ea0026;
+  width: 60%;
+  margin: 10rem 20% 0rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+#wrapper .container #contact h2 a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+#transparent-column {
+  height: 30vh;
+  width: 100vw;
+  background: transparent;
+}
+
+footer {
+  width: 100vw;
+  height: 30vh;
+  background: #b20823;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+footer h2 {
+  color: #f1f1f1;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+footer h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+footer p {
+  width: 90%;
+  margin: auto;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
+}
+
+footer p a i {
+  color: #f1f1f1;
+  padding: 0 1rem;
+}
+
+/* ==================== */
+#wrapper #contact-page,
+#wrapper #about-page,
+#wrapper #works-page,
+#wrapper #work-page {
+  margin-bottom: 30vh;
+}
+
+#wrapper #contact-page h1,
+#wrapper #about-page h1,
+#wrapper #works-page h1,
+#wrapper #work-page h1 {
+  font-size: 3rem;
+  color: #f1f1f1;
+  text-indent: 2rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  text-indent: 1.5rem;
+}
+
+#wrapper #contact-page .subpage-title,
+#wrapper #about-page .subpage-title,
+#wrapper #works-page .subpage-title,
+#wrapper #work-page .subpage-title {
+  color: #ea0026;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 7rem 0 2rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+#wrapper #contact-page .subpage-title span,
+#wrapper #about-page .subpage-title span,
+#wrapper #works-page .subpage-title span,
+#wrapper #work-page .subpage-title span {
+  color: #f1f1f1;
+  font-size: 12rem;
+  text-transform: lowercase;
+}
+
+#wrapper #contact-page .sub-header,
+#wrapper #about-page .sub-header,
+#wrapper #works-page .sub-header,
+#wrapper #work-page .sub-header {
+  color: #f1f1f1;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 90%;
+  margin: 0 5% 0;
+  padding-bottom: 2rem;
+}
+
+#wrapper #contact-page #contact,
+#wrapper #about-page #contact,
+#wrapper #works-page #contact,
+#wrapper #work-page #contact {
+  margin: 10rem 20% 0;
+  width: 60%;
+  padding-bottom: 10rem;
+}
+
+#wrapper #contact-page #contact h2,
+#wrapper #about-page #contact h2,
+#wrapper #works-page #contact h2,
+#wrapper #work-page #contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  border: 0.2rem solid #ea0026;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+#wrapper #contact-page #contact h2 a,
+#wrapper #about-page #contact h2 a,
+#wrapper #works-page #contact h2 a,
+#wrapper #work-page #contact h2 a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+#wrapper #about-page #carouselExampleControls {
+  height: 80vh;
+  width: 80vw;
+  margin: 5rem 10vw;
+}
+
+#wrapper #work-page #carouselExampleControls {
+  height: 80vw;
+  width: 80vw;
+  margin: 5rem 10vw;
+}
+
+#wrapper #about-page #carouselExampleControls .carousel-inner,
+#wrapper #work-page #carouselExampleControls .carousel-inner {
+  height: 100%;
+}
+
+#wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item,
+#wrapper #work-page #carouselExampleControls .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+#wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item img,
+#wrapper #work-page #carouselExampleControls .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#wrapper #about-page p,
+#wrapper #work-page p {
+  color: grey;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  width: 90%;
+  margin: 0 5%;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+/* ==================== */
+#wrapper #contact-page #contact-form {
+  width: 100%;
+}
+
+#wrapper #contact-page #contact-form form {
+  width: 80%;
+  margin: auto;
+}
+
+#wrapper #contact-page #contact-form form input,
+#wrapper #contact-page #contact-form form textarea {
+  width: 100%;
+  color: #f1f1f1;
+  background: transparent;
+  border: 0.4rem solid #f1f1f1;
+  margin: 1.5rem 0;
+  border-radius: 2rem;
+  padding: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+#wrapper #contact-page #contact-form form textarea {
+  height: 15rem;
+}
+
+#wrapper #contact-page #contact-form form #submit {
+  width: 60%;
+  font-size: 1.8rem;
+  color: #f1f1f1;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 1rem 0rem;
+  border-radius: 5rem;
+  margin: 2rem 20% 5rem;
+  border: 0.2rem solid #f1f1f1;
+}
+
+/* ==================== */
+#wrapper #about-page p {
+  text-align: center;
+}
+
+#wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item h2 {
+  color: #f1f1f1;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  text-align: center;
+  position: relative;
+  top: -6.5rem;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item h2 span {
+  font-size: 2rem;
+  color: #f1f1f1;
+}
+
+#wrapper #about-page .container {
+  width: 50vw;
+  height: 50vw;
+  background: yellow;
+  margin: 2rem 25vw;
+  padding: 0;
+}
+
+#wrapper #about-page .container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ==================== */
+#wrapper #works-page .container {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+#wrapper #works-page .container a {
+  text-decoration: none;
+}
+
+#wrapper #works-page .container #work-pic {
+  width: 80vw;
+  height: 50vw;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+#wrapper #works-page .container #work-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+#wrapper #works-page .container .work-header {
+  color: #f1f1f1;
+  font-size: 2rem;
+  line-height: 3rem;
+  width: 90%;
+  margin: 0 10vw 0;
+}
+
+#wrapper #works-page .container p {
+  color: grey;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  width: 80%;
+  margin: 0 10%;
+  font-weight: 700;
+  padding: 1rem 0 0;
+}
+
+/* ==================== */
+#wrapper #work-page p {
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+#wrapper #work-page .image {
+  width: 90vw;
+  height: 70vh;
+  margin: 5vw;
+}
+
+#wrapper #work-page .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ============================================= */
+@media (min-width: 768px) {
+  #wrapper {
+    /* ==================== */
+    /* ===================== */
+  }
+  #wrapper #nav ul li {
+    padding: 2rem 1rem;
+  }
+  #wrapper #nav #quote {
+    line-height: 4rem;
+  }
+  #wrapper #banner h1 {
+    font-size: 3rem;
+  }
+  #wrapper #banner h1,
+  #wrapper #banner h2,
+  #wrapper #banner h3,
+  #wrapper #banner p,
+  #wrapper #banner #typewriter {
+    text-indent: 2.5rem;
+  }
+  #wrapper #banner h2 {
+    font-size: 10rem;
+    line-height: 6rem;
+  }
+  #wrapper #banner h3 {
+    font-size: 10rem;
+  }
+  #wrapper #banner p {
+    width: 100%;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  #wrapper #banner #typewriter {
+    color: yellow;
+    font-size: 5rem;
+  }
+  #wrapper #banner #contact {
+    width: 40%;
+    padding: 1.5rem 0;
+    left: 30%;
+  }
+  #wrapper .container {
+    width: 100%;
+    min-height: 100vh;
+    background: #1f1f1f;
+    float: left;
+  }
+  #wrapper .container a .work {
+    width: 40%;
+    height: 60vw;
+    margin: 0 5% 5rem;
+    float: left;
+  }
+  #wrapper .container a .work:first-child {
+    margin-top: 5rem;
+  }
+  #wrapper .container a .work:last-child {
+    margin-bottom: 0;
+  }
+  #wrapper .container #contact {
+    float: left;
+    width: 40vw;
+    margin-left: 30vw;
+  }
+  #wrapper .container #contact h2 {
+    font-size: 3rem;
+    width: 100%;
+    margin: 10rem 0 5rem;
+    padding: 1rem 0;
+  }
+  footer h2 {
+    font-size: 5rem;
+    margin-top: 5rem;
+  }
+  footer h3 {
+    font-size: 3rem;
+  }
+  footer p {
+    font-size: 3rem;
+  }
+  footer p a i {
+    padding: 0 2rem;
+  }
+  /* ==================== */
+  #wrapper #contact-page h1,
+  #wrapper #about-page h1,
+  #wrapper #works-page h1,
+  #wrapper #work-page h1 {
+    font-size: 3rem;
+  }
+  #wrapper #contact-page .subpage-title,
+  #wrapper #about-page .subpage-title,
+  #wrapper #works-page .subpage-title,
+  #wrapper #work-page .subpage-title {
+    font-size: 3.5rem;
+  }
+  #wrapper #contact-page .subpage-title span,
+  #wrapper #about-page .subpage-title span,
+  #wrapper #works-page .subpage-title span,
+  #wrapper #work-page .subpage-title span {
+    font-size: 15rem;
+  }
+  #wrapper #contact-page .sub-header,
+  #wrapper #about-page .sub-header,
+  #wrapper #works-page .sub-header,
+  #wrapper #work-page .sub-header {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+  #wrapper #contact-page #contact,
+  #wrapper #about-page #contact,
+  #wrapper #works-page #contact,
+  #wrapper #work-page #contact {
+    margin: 10rem 30% 0;
+    width: 40%;
+  }
+  #wrapper #contact-page #contact h2,
+  #wrapper #about-page #contact h2,
+  #wrapper #works-page #contact h2,
+  #wrapper #work-page #contact h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    font-weight: 700;
+  }
+  #wrapper #about-page #carouselExampleControls {
+    height: 70vh;
+    width: 70vw;
+    margin: 5rem 15vw;
+  }
+  #wrapper #about-page p,
+  #wrapper #work-page p {
+    color: grey;
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+  /* ==================== */
+  #wrapper #contact-page #contact-form form input,
+  #wrapper #contact-page #contact-form form textarea {
+    font-size: 2rem;
+  }
+  #wrapper #contact-page #contact-form form textarea {
+    height: 20rem;
+  }
+  #wrapper #contact-page #contact-form form #submit {
+    width: 40%;
+    font-size: 3rem;
+    margin: 2rem 30% 5rem;
+  }
+  /* ==================== */
+  #wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item h2 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    position: relative;
+    top: -11rem;
+    padding: 1rem 0;
+  }
+  #wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item h2 span {
+    font-size: 3rem;
+  }
+  #wrapper #about-page .container {
+    width: 50vw;
+    height: 50vw;
+    margin: 5rem 25vw;
+  }
+  #wrapper #about-page .container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* ==================== */
+  #wrapper #works-page .container {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+  #wrapper #works-page .container #work-pic {
+    width: 70vw;
+  }
+  #wrapper #works-page .container .work-header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  #wrapper #works-page .container p {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  /* ==================== */
+  #wrapper #work-page .image {
+    width: 70vw;
+    height: 70vh;
+    margin: 15vw;
+  }
+}
+
+/* ============================================= */
+@media (min-width: 992px) {
+  #wrapper {
+    /* ==================== */
+    /* ===================== */
+  }
+  #wrapper #menu i {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #menu i:hover {
+    cursor: pointer;
+    color: #ea0026;
+  }
+  #wrapper #nav #close-icon #close {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #nav #close-icon #close:hover {
+    color: #ea0026;
+    cursor: pointer;
+  }
+  #wrapper #nav ul li a {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #nav ul li a:hover {
+    color: #ea0026;
+  }
+  #wrapper #nav #social i {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #nav #social i:hover {
+    color: #ea0026;
+    cursor: pointer;
+  }
+  #wrapper #banner {
+    background: black;
+    background-image: none;
+  }
+  #wrapper #banner #banner-img {
+    display: block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+  }
+  #wrapper #banner h1,
+  #wrapper #banner h2,
+  #wrapper #banner h3,
+  #wrapper #banner p,
+  #wrapper #banner #typewriter {
+    text-indent: 5rem;
+  }
+  #wrapper #banner h2 {
+    font-size: 12rem;
+    margin-top: 20vh;
+  }
+  #wrapper #banner h3 {
+    font-size: 12rem;
+  }
+  #wrapper #banner p {
+    font-size: 3.5rem;
+  }
+  #wrapper #banner #typewriter {
+    font-size: 5rem;
+  }
+  #wrapper #banner #contact {
+    font-size: 3rem;
+    width: 20%;
+    padding: 1rem 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    bottom: 5rem;
+    left: 40%;
+  }
+  #wrapper #banner #contact a {
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+  #wrapper #banner #contact:hover {
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+    background: #b20823;
+  }
+  #wrapper #banner #contact:hover a {
+    color: #f1f1f1;
+  }
+  #wrapper .container {
+    width: 60vw;
+    margin-left: 20vw;
+    margin-bottom: 0vh;
+    min-height: 10vh;
+    float: left;
+  }
+  #wrapper .container a .work {
+    width: 40%;
+    height: 20vw;
+    float: left;
+    margin: 0 5% 2rem;
+  }
+  #wrapper .container #contact {
+    float: left;
+    width: 40%;
+    margin: 15rem 30% 10rem;
+  }
+  #wrapper .container #contact h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    width: 100%;
+    padding: 1rem 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper .container #contact h2:hover {
+    background: #b20823;
+    border: 0.2rem solid #f1f1f1;
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+  #wrapper .container #contact h2 a {
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+  footer {
+    position: initial;
+    float: left;
+  }
+  footer h2 {
+    font-size: 5rem;
+  }
+  footer h3 {
+    font-size: 2.2rem;
+  }
+  footer p {
+    font-size: 3rem;
+  }
+  footer p a {
+    text-decoration: none;
+  }
+  footer p a:hover {
+    text-decoration: none;
+  }
+  footer p a i {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  footer p a i:hover {
+    color: black;
+  }
+  /* ==================== */
+  #wrapper #contact-page,
+  #wrapper #about-page,
+  #wrapper #works-page,
+  #wrapper #work-page {
+    float: left;
+    margin-bottom: 0;
+  }
+  #wrapper #contact-page .subpage-title,
+  #wrapper #about-page .subpage-title,
+  #wrapper #works-page .subpage-title,
+  #wrapper #work-page .subpage-title {
+    font-size: 6rem;
+  }
+  #wrapper #contact-page .subpage-title span,
+  #wrapper #about-page .subpage-title span,
+  #wrapper #works-page .subpage-title span,
+  #wrapper #work-page .subpage-title span {
+    font-size: 20rem;
+  }
+  #wrapper #contact-page .sub-header,
+  #wrapper #about-page .sub-header,
+  #wrapper #works-page .sub-header,
+  #wrapper #work-page .sub-header {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    width: 60%;
+    margin: 0 20% 0;
+  }
+  #wrapper #contact-page #contact,
+  #wrapper #about-page #contact,
+  #wrapper #works-page #contact,
+  #wrapper #work-page #contact {
+    float: left;
+    width: 20%;
+    margin: 15rem calc(80% / 2) 5rem;
+  }
+  #wrapper #contact-page #contact h2,
+  #wrapper #about-page #contact h2,
+  #wrapper #works-page #contact h2,
+  #wrapper #work-page #contact h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    width: 100%;
+    padding: 1rem 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #contact-page #contact h2:hover,
+  #wrapper #about-page #contact h2:hover,
+  #wrapper #works-page #contact h2:hover,
+  #wrapper #work-page #contact h2:hover {
+    background: #b20823;
+    border: 0.2rem solid #f1f1f1;
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+  #wrapper #contact-page #contact h2 a,
+  #wrapper #about-page #contact h2 a,
+  #wrapper #works-page #contact h2 a,
+  #wrapper #work-page #contact h2 a {
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+  #wrapper #about-page #carouselExampleControls {
+    height: 80vh;
+    width: 50vw;
+    margin: 5rem 25vw;
+  }
+  #wrapper #work-page #carouselExampleControls {
+    height: 30vw;
+    width: 40vw;
+    margin: 5rem 30vw;
+  }
+  #wrapper #about-page #carouselExampleControls .carousel-inner,
+  #wrapper #work-page #carouselExampleControls .carousel-inner {
+    height: 100%;
+  }
+  #wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item,
+  #wrapper #work-page #carouselExampleControls .carousel-inner .carousel-item {
+    height: 100%;
+  }
+  #wrapper #about-page #carouselExampleControls .carousel-inner .carousel-item img,
+  #wrapper #work-page #carouselExampleControls .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #wrapper #about-page p,
+  #wrapper #work-page p {
+    font-size: 2rem;
+    line-height: 4rem;
+    width: 60%;
+    margin: 0 20%;
+    text-align: justify;
+    text-indent: 3.5rem;
+  }
+  /* ==================== */
+  #wrapper #contact-page {
+    width: 100vw;
+  }
+  #wrapper #contact-page #contact-form {
+    width: 60%;
+    margin: auto;
+  }
+  #wrapper #contact-page #contact-form form textarea {
+    height: 25rem;
+  }
+  #wrapper #contact-page #contact-form form #submit {
+    width: 25%;
+    font-size: 1.8rem;
+    margin: 2rem calc(75% / 2) 5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #wrapper #contact-page #contact-form form #submit:hover {
+    background: #ea0026;
+    cursor: pointer;
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+  /* ==================== */
+  #wrapper #about-page .container {
+    width: calc(50vw / 4);
+    height: 10%;
+    float: left;
+    margin: 10rem calc(50vw / 8) 0;
+  }
+  /* ==================== */
+  #wrapper #works-page .container {
+    width: 25%;
+  }
+  #wrapper #works-page .container:nth-child(odd) {
+    margin: 4rem 20% 4rem 5%;
+  }
+  #wrapper #works-page .container:nth-child(even) {
+    margin: 4rem 5% 4rem 20%;
+  }
+  #wrapper #works-page .container #work-pic {
+    width: 100%;
+    height: 20vw;
+    margin: 0;
+    float: left;
+  }
+  #wrapper #works-page .container .work-header {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    width: 100%;
+    margin: 0;
+  }
+  #wrapper #works-page .container p {
+    color: grey;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    width: 100%;
+    margin: 0;
+  }
+  /* ==================== */
+  #wrapper #work-page .image {
+    width: 50vw;
+    height: 60vh;
+    margin: 5vw 25vw;
+  }
+}
+
+/* ============================================= */
+@media (min-width: 1600px) {
+  #wrapper {
+    width: 1600px;
+  }
+  .container {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  .container a .work {
+    width: 35%;
+    margin: 0 calc(30% / 4) 2rem;
+  }
+  /* ==================== */
+  #wrapper #contact-page,
+  #wrapper #about-page,
+  #wrapper #works-page,
+  #wrapper #work-page {
+    float: left;
+  }
+  #wrapper #contact-page #contact,
+  #wrapper #about-page #contact,
+  #wrapper #works-page #contact,
+  #wrapper #work-page #contact {
+    float: left;
+    width: 20%;
+    margin: 15rem calc(80% / 2) 5rem;
+  }
+  /* ==================== */
+  #wrapper #contact-page {
+    width: 100vw;
+  }
+  /* ==================== */
+  #wrapper #works-page {
+    width: 160rem;
+    margin: 0 calc(50vw - calc(160rem /2));
+  }
+}
+/*# sourceMappingURL=style.css.map */

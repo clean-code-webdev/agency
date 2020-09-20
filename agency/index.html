@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- owesome fonts -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- page title -->
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="black-screen"></div>
+
+    <div id="wrapper">
+      <div id="menu" onclick="showNav()">
+        <i class="fa fa-bars"></i>
+      </div>
+
+      <div id="nav">
+        <div id="close-icon" onclick="hideNav()">
+          <i class="fa fa-close" id="close"></i>
+
+          <ul>
+            <li>
+              <a href="#">home</a>
+            </li>
+            <li>
+              <a href="./html/about.html">about</a>
+            </li>
+            <li>
+              <a href="./html/works.html">works</a>
+            </li>
+            <li>
+              <a href="./html/contact.html">contact</a>
+            </li>
+          </ul>
+
+          <p id="quote">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            eaque.
+          </p>
+
+          <p id="social">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-youtube-square"></i>
+          </p>
+        </div>
+      </div>
+
+      <div id="banner">
+        <img src="./image/banner.gif" alt="" id="banner-img" />
+        <h1 id="banner-name"></h1>
+        <h2>More than</h2>
+        <h3>an agency</h3>
+        <p>Your bridge to success!</p>
+        <div id="typewriter"></div>
+        <h4 id="contact"><a href="./html/contact.html">contact us</a></h4>
+      </div>
+
+      <div class="container">
+        <a href="./html/work-page.html">
+          <div class="work">
+            <img src="./image/works/ny-2.jpg" alt="" />
+          </div>
+        </a>
+        <a href="./html/work-page.html">
+          <div class="work">
+            <img src="./image/works/paris.jpg" alt="" />
+          </div>
+        </a>
+        <a href="./html/work-page.html">
+          <div class="work">
+            <img src="./image/works/london.jpg" alt="" />
+          </div>
+        </a>
+        <a href="./html/work-page.html">
+          <div class="work">
+            <img src="./image/works/rio.jpg" alt="" />
+          </div>
+        </a>
+
+        <div id="contact">
+          <h2><a href="./html/contact.html">get in touch</a></h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="transparent-column"></div>
+
+    <footer>
+      <h2 id="footer-name"></h2>
+      <h3><i class="fa fa-copyright"></i> <span id="copyright"></span></h3>
+      <p>
+        <a href="#" target="blank" id="facebook-address">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+
+        <a href="#" target="blank" id="instagram-address">
+          <i class="fa fa-instagram"></i>
+        </a>
+
+        <a href="#" target="blank" id="twitter-address">
+          <i class="fa fa-twitter"></i>
+        </a>
+
+        <a href="#" target="blank" id="linkedin-address">
+          <i class="fa fa-linkedin"></i>
+        </a>
+
+        <a href="#" target="blank" id="youtube-address">
+          <i class="fa fa-youtube-square"></i>
+        </a>
+      </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- script for the type writer -->
+    <script src="./js/typewriter/typewriter.js"></script>
+    <script src="./js/typewriter/core.js"></script>
+  </body>
+</html>
